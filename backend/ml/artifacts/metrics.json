@@ -1,0 +1,137 @@
+{
+  "champion_model": "XGBoost",
+  "champion_metrics": {
+    "mae": 2.408,
+    "rmse": 3.094,
+    "r2": 0.9502
+  },
+  "all_models_benchmarks": {
+    "Linear Regression": {
+      "mae": 2.439,
+      "rmse": 3.098,
+      "r2": 0.9501
+    },
+    "Random Forest": {
+      "mae": 2.719,
+      "rmse": 3.434,
+      "r2": 0.9387
+    },
+    "Gradient Boosting": {
+      "mae": 2.467,
+      "rmse": 3.157,
+      "r2": 0.9482
+    },
+    "XGBoost": {
+      "mae": 2.408,
+      "rmse": 3.094,
+      "r2": 0.9502
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "previous_cgpa",
+      "importance": 0.5087
+    },
+    {
+      "feature": "internal_marks",
+      "importance": 0.3112
+    },
+    {
+      "feature": "attendance",
+      "importance": 0.0566
+    },
+    {
+      "feature": "study_hours_per_week",
+      "importance": 0.0479
+    },
+    {
+      "feature": "backlogs_count",
+      "importance": 0.0477
+    },
+    {
+      "feature": "assignment_completion_rate",
+      "importance": 0.0127
+    },
+    {
+      "feature": "sleep_hours_avg",
+      "importance": 0.0058
+    },
+    {
+      "feature": "practice_tests_taken",
+      "importance": 0.0052
+    },
+    {
+      "feature": "extracurricular_hours",
+      "importance": 0.0042
+    }
+  ],
+  "feature_cols": [
+    "attendance",
+    "study_hours_per_week",
+    "internal_marks",
+    "assignment_completion_rate",
+    "previous_cgpa",
+    "extracurricular_hours",
+    "sleep_hours_avg",
+    "practice_tests_taken",
+    "backlogs_count"
+  ],
+  "feature_baselines": {
+    "attendance": {
+      "mean": 77.89,
+      "std": 10.62,
+      "min": 45.0,
+      "max": 99.5
+    },
+    "study_hours_per_week": {
+      "mean": 14.38,
+      "std": 7.0,
+      "min": 2.0,
+      "max": 36.0
+    },
+    "internal_marks": {
+      "mean": 68.52,
+      "std": 13.13,
+      "min": 32.0,
+      "max": 98.5
+    },
+    "assignment_completion_rate": {
+      "mean": 79.91,
+      "std": 11.96,
+      "min": 39.0,
+      "max": 100.0
+    },
+    "previous_cgpa": {
+      "mean": 6.86,
+      "std": 1.24,
+      "min": 4.2,
+      "max": 9.95
+    },
+    "extracurricular_hours": {
+      "mean": 4.61,
+      "std": 4.29,
+      "min": 0.0,
+      "max": 18.0
+    },
+    "sleep_hours_avg": {
+      "mean": 6.98,
+      "std": 1.11,
+      "min": 4.2,
+      "max": 9.8
+    },
+    "practice_tests_taken": {
+      "mean": 4.74,
+      "std": 2.87,
+      "min": 0.0,
+      "max": 12.0
+    },
+    "backlogs_count": {
+      "mean": 0.79,
+      "std": 0.85,
+      "min": 0.0,
+      "max": 3.0
+    }
+  },
+  "dataset_samples": 2000,
+  "version": "1.4.0-production"
+}

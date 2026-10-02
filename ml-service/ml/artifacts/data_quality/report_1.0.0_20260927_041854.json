@@ -1,0 +1,163 @@
+{
+  "status": "PASSED",
+  "overall_status": "PASSED",
+  "timestamp": "2026-09-27T04:18:54.851701+00:00",
+  "dataset_version": "1.0.0",
+  "total_rows": 1044,
+  "total_columns": 7,
+  "numeric_columns": [
+    "attendance_percentage",
+    "assignment_score",
+    "internal_marks",
+    "previous_score",
+    "study_hours",
+    "assignments_completed",
+    "final_score"
+  ],
+  "categorical_columns": [],
+  "missing_values": 0,
+  "duplicate_rows": 0,
+  "checks": {
+    "schema": {
+      "status": "PASS",
+      "missing_columns": [],
+      "dtype_mismatches": {},
+      "target_present": true,
+      "required_columns_count": 7,
+      "present_columns_count": 7
+    },
+    "missing_values": {
+      "status": "PASS",
+      "total_missing_cells": 0,
+      "missing_percentage_overall": 0.0,
+      "feature_breakdown": {
+        "attendance_percentage": {
+          "missing_count": 0,
+          "missing_percentage": 0.0
+        },
+        "assignment_score": {
+          "missing_count": 0,
+          "missing_percentage": 0.0
+        },
+        "internal_marks": {
+          "missing_count": 0,
+          "missing_percentage": 0.0
+        },
+        "previous_score": {
+          "missing_count": 0,
+          "missing_percentage": 0.0
+        },
+        "study_hours": {
+          "missing_count": 0,
+          "missing_percentage": 0.0
+        },
+        "assignments_completed": {
+          "missing_count": 0,
+          "missing_percentage": 0.0
+        },
+        "final_score": {
+          "missing_count": 0,
+          "missing_percentage": 0.0
+        }
+      }
+    },
+    "duplicates": {
+      "status": "PASS",
+      "duplicate_rows": 0,
+      "duplicate_percentage": 0.0
+    },
+    "ranges": {
+      "status": "PASS",
+      "violation_columns_count": 0,
+      "details": {}
+    },
+    "categories": {
+      "status": "PASS",
+      "violations": {}
+    },
+    "outliers": {
+      "status": "PASS",
+      "method": "IQR (Tukey's Fences 1.5x)",
+      "total_outliers": 212,
+      "feature_details": {
+        "attendance_percentage": {
+          "q1": 93.3,
+          "q3": 100.0,
+          "iqr": 6.7,
+          "lower_bound": 83.25,
+          "upper_bound": 110.05,
+          "outlier_count": 54,
+          "outlier_percentage": 5.17
+        },
+        "assignment_score": {
+          "q1": 45.2,
+          "q3": 67.03,
+          "iqr": 21.83,
+          "lower_bound": 12.46,
+          "upper_bound": 99.76,
+          "outlier_count": 4,
+          "outlier_percentage": 0.38
+        },
+        "internal_marks": {
+          "q1": 45.0,
+          "q3": 65.0,
+          "iqr": 20.0,
+          "lower_bound": 15.0,
+          "upper_bound": 95.0,
+          "outlier_count": 1,
+          "outlier_percentage": 0.1
+        },
+        "previous_score": {
+          "q1": 45.0,
+          "q3": 65.0,
+          "iqr": 20.0,
+          "lower_bound": 15.0,
+          "upper_bound": 95.0,
+          "outlier_count": 20,
+          "outlier_percentage": 1.92
+        },
+        "study_hours": {
+          "q1": 2.2,
+          "q3": 4.4,
+          "iqr": 2.2,
+          "lower_bound": -1.1,
+          "upper_bound": 7.7,
+          "outlier_count": 79,
+          "outlier_percentage": 7.57
+        },
+        "assignments_completed": {
+          "q1": 6.0,
+          "q3": 8.0,
+          "iqr": 2.0,
+          "lower_bound": 3.0,
+          "upper_bound": 11.0,
+          "outlier_count": 0,
+          "outlier_percentage": 0.0
+        },
+        "final_score": {
+          "q1": 50.0,
+          "q3": 70.0,
+          "iqr": 20.0,
+          "lower_bound": 20.0,
+          "upper_bound": 100.0,
+          "outlier_count": 54,
+          "outlier_percentage": 5.17
+        }
+      }
+    },
+    "target": {
+      "status": "PASS",
+      "statistics": {
+        "target_column": "final_score",
+        "count": 1044,
+        "min": 0.0,
+        "max": 100.0,
+        "mean": 56.71,
+        "median": 55.0,
+        "std": 19.32
+      }
+    }
+  },
+  "issues": [],
+  "warnings": []
+}

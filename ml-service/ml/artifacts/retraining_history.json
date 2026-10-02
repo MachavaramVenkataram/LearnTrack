@@ -1,0 +1,62 @@
+[
+  {
+    "retraining_id": "d97609c5e2384297b23ed8cbab77254f",
+    "candidate_version": "candidate-8963bdf8",
+    "candidate_model_type": "Linear Regression (Ridge)",
+    "trigger": "manual",
+    "dataset_version": "1.0.0",
+    "previous_model_version": "1",
+    "status": "VALIDATED",
+    "started_at": "2026-09-26T16:39:58.925901+00:00",
+    "completed_at": "2026-09-26T16:40:19.470226+00:00",
+    "candidate_metrics": {
+      "validation": {
+        "mae": 4.284,
+        "rmse": 6.298,
+        "r2": 0.8451
+      },
+      "test": {
+        "mae": 4.494,
+        "rmse": 7.677,
+        "r2": 0.8392
+      },
+      "cv": {
+        "mean_rmse": 8.247,
+        "std_rmse": 0.65,
+        "mean_mae": 4.963,
+        "std_mae": 0.141,
+        "mean_r2": 0.8291,
+        "std_r2": 0.0218
+      }
+    },
+    "regression_evaluation": {
+      "candidate_version": "candidate-8963bdf8",
+      "production_version": "1",
+      "status": "VALIDATED",
+      "is_promotable": true,
+      "recommendation": "VALIDATED candidate candidate-8963bdf8. Performance is improved (Candidate RMSE: 7.677 vs Production: 7.677). Candidate model is verified and held for explicit administrator promotion.",
+      "regression_protection": {
+        "tolerance_percent": 5.0,
+        "max_allowable_rmse": 8.061,
+        "passed_regression_check": true
+      },
+      "metrics_comparison": {
+        "candidate": {
+          "rmse": 7.677,
+          "mae": 4.494,
+          "r2": 0.8392
+        },
+        "production": {
+          "rmse": 7.677,
+          "mae": 4.494,
+          "r2": 0.8392
+        },
+        "deltas": {
+          "rmse_delta": 0.0,
+          "mae_delta": 0.0,
+          "r2_delta": 0.0
+        }
+      }
+    }
+  }
+]

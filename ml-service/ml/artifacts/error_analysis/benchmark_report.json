@@ -1,0 +1,882 @@
+{
+  "evaluation_type": "BENCHMARK",
+  "status": "COMPLETED",
+  "timestamp": "2026-10-02T10:00:25.715562+00:00",
+  "sample_count": 80,
+  "model_name": "Test Model",
+  "model_version": "1",
+  "dataset_version": "1.0.0",
+  "run_id": null,
+  "thresholds": {
+    "warning_threshold": 8.0,
+    "large_threshold": 15.0
+  },
+  "metrics": {
+    "mae": 3.07,
+    "rmse": 3.84,
+    "r2": 0.9472,
+    "mean_error": 0.5,
+    "median_error": 0.51,
+    "median_absolute_error": 2.43,
+    "max_absolute_error": 10.48,
+    "sample_count": 80
+  },
+  "performance_ranges": [
+    {
+      "range_label": "0\u201340 (At Risk)",
+      "range_min": 0.0,
+      "range_max": 40.0,
+      "prediction_count": 0,
+      "insufficient_observations": true,
+      "message": "Insufficient observations",
+      "mae": null,
+      "rmse": null,
+      "mean_error": null
+    },
+    {
+      "range_label": "40\u201360 (Developing)",
+      "range_min": 40.0,
+      "range_max": 60.0,
+      "prediction_count": 36,
+      "insufficient_observations": false,
+      "message": null,
+      "mae": 3.17,
+      "rmse": 4.12,
+      "mean_error": 1.26
+    },
+    {
+      "range_label": "60\u201380 (Proficient)",
+      "range_min": 60.0,
+      "range_max": 80.0,
+      "prediction_count": 22,
+      "insufficient_observations": false,
+      "message": null,
+      "mae": 3.38,
+      "rmse": 4.08,
+      "mean_error": 0.15
+    },
+    {
+      "range_label": "80\u2013100 (Advanced)",
+      "range_min": 80.0,
+      "range_max": 100.0,
+      "prediction_count": 22,
+      "insufficient_observations": false,
+      "message": null,
+      "mae": 2.6,
+      "rmse": 3.02,
+      "mean_error": -0.42
+    }
+  ],
+  "feature_segments": {
+    "attendance_percentage": [
+      {
+        "segment_label": "0\u201360% (Low Attendance)",
+        "min": 0.0,
+        "max": 60.0,
+        "count": 0,
+        "insufficient_observations": true,
+        "message": "Insufficient observations",
+        "mae": null,
+        "rmse": null,
+        "mean_error": null
+      },
+      {
+        "segment_label": "60\u201375% (Below Target)",
+        "min": 60.0,
+        "max": 75.0,
+        "count": 38,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.2,
+        "rmse": 4.13,
+        "mean_error": 1.3
+      },
+      {
+        "segment_label": "75\u201390% (Satisfactory)",
+        "min": 75.0,
+        "max": 90.0,
+        "count": 22,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.29,
+        "rmse": 3.98,
+        "mean_error": -0.29
+      },
+      {
+        "segment_label": "90\u2013100% (High Attendance)",
+        "min": 90.0,
+        "max": 100.0,
+        "count": 20,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 2.56,
+        "rmse": 3.03,
+        "mean_error": -0.17
+      }
+    ],
+    "study_hours": [
+      {
+        "segment_label": "< 2 hrs/wk (Minimal)",
+        "min": 0.0,
+        "max": 2.0,
+        "count": 7,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 1.62,
+        "rmse": 2.58,
+        "mean_error": -0.57
+      },
+      {
+        "segment_label": "2\u20135 hrs/wk (Moderate)",
+        "min": 2.0,
+        "max": 5.0,
+        "count": 21,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.86,
+        "rmse": 4.75,
+        "mean_error": 1.84
+      },
+      {
+        "segment_label": "5\u20138 hrs/wk (Focused)",
+        "min": 5.0,
+        "max": 8.0,
+        "count": 15,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 2.57,
+        "rmse": 3.16,
+        "mean_error": 1.39
+      },
+      {
+        "segment_label": "8+ hrs/wk (High)",
+        "min": 8.0,
+        "max": 60.0,
+        "count": 37,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.1,
+        "rmse": 3.71,
+        "mean_error": -0.43
+      }
+    ]
+  },
+  "residual_analysis": {
+    "status": "COMPLETED",
+    "sample_count": 80,
+    "mean_residual": 0.495,
+    "median_residual": 0.508,
+    "std_residual": 3.806,
+    "skewness": 0.175,
+    "distribution_bins": [
+      {
+        "bin_label": "-7.4 to -5.6",
+        "bin_min": -7.4,
+        "bin_max": -5.6,
+        "count": 6,
+        "percentage": 7.5
+      },
+      {
+        "bin_label": "-5.6 to -3.8",
+        "bin_min": -5.6,
+        "bin_max": -3.8,
+        "count": 5,
+        "percentage": 6.2
+      },
+      {
+        "bin_label": "-3.8 to -2.0",
+        "bin_min": -3.8,
+        "bin_max": -2.0,
+        "count": 9,
+        "percentage": 11.2
+      },
+      {
+        "bin_label": "-2.0 to -0.3",
+        "bin_min": -2.0,
+        "bin_max": -0.3,
+        "count": 16,
+        "percentage": 20.0
+      },
+      {
+        "bin_label": "-0.3 to 1.5",
+        "bin_min": -0.3,
+        "bin_max": 1.5,
+        "count": 13,
+        "percentage": 16.2
+      },
+      {
+        "bin_label": "1.5 to 3.3",
+        "bin_min": 1.5,
+        "bin_max": 3.3,
+        "count": 13,
+        "percentage": 16.2
+      },
+      {
+        "bin_label": "3.3 to 5.1",
+        "bin_min": 3.3,
+        "bin_max": 5.1,
+        "count": 8,
+        "percentage": 10.0
+      },
+      {
+        "bin_label": "5.1 to 6.9",
+        "bin_min": 5.1,
+        "bin_max": 6.9,
+        "count": 5,
+        "percentage": 6.2
+      },
+      {
+        "bin_label": "6.9 to 8.7",
+        "bin_min": 6.9,
+        "bin_max": 8.7,
+        "count": 4,
+        "percentage": 5.0
+      },
+      {
+        "bin_label": "8.7 to 10.5",
+        "bin_min": 8.7,
+        "bin_max": 10.5,
+        "count": 1,
+        "percentage": 1.2
+      }
+    ],
+    "scatter_points": [
+      {
+        "actual": 60.6,
+        "predicted": 62.6,
+        "residual": -2.0,
+        "absolute_error": 2.0
+      },
+      {
+        "actual": 92.3,
+        "predicted": 91.7,
+        "residual": 0.6,
+        "absolute_error": 0.6
+      },
+      {
+        "actual": 80.3,
+        "predicted": 82.9,
+        "residual": -2.6,
+        "absolute_error": 2.6
+      },
+      {
+        "actual": 72.9,
+        "predicted": 79.0,
+        "residual": -6.1,
+        "absolute_error": 6.1
+      },
+      {
+        "actual": 48.6,
+        "predicted": 47.6,
+        "residual": 0.9,
+        "absolute_error": 0.9
+      },
+      {
+        "actual": 48.6,
+        "predicted": 47.6,
+        "residual": 0.9,
+        "absolute_error": 0.9
+      },
+      {
+        "actual": 43.2,
+        "predicted": 49.5,
+        "residual": -6.3,
+        "absolute_error": 6.3
+      },
+      {
+        "actual": 87.6,
+        "predicted": 90.7,
+        "residual": -3.1,
+        "absolute_error": 3.1
+      },
+      {
+        "actual": 73.1,
+        "predicted": 71.2,
+        "residual": 1.9,
+        "absolute_error": 1.9
+      },
+      {
+        "actual": 78.9,
+        "predicted": 81.1,
+        "residual": -2.2,
+        "absolute_error": 2.2
+      },
+      {
+        "actual": 41.1,
+        "predicted": 39.3,
+        "residual": 1.9,
+        "absolute_error": 1.9
+      },
+      {
+        "actual": 93.3,
+        "predicted": 91.5,
+        "residual": 1.9,
+        "absolute_error": 1.9
+      },
+      {
+        "actual": 85.8,
+        "predicted": 86.8,
+        "residual": -1.0,
+        "absolute_error": 1.0
+      },
+      {
+        "actual": 51.7,
+        "predicted": 44.0,
+        "residual": 7.7,
+        "absolute_error": 7.7
+      },
+      {
+        "actual": 50.0,
+        "predicted": 43.1,
+        "residual": 6.9,
+        "absolute_error": 6.9
+      },
+      {
+        "actual": 50.1,
+        "predicted": 47.8,
+        "residual": 2.2,
+        "absolute_error": 2.2
+      },
+      {
+        "actual": 56.7,
+        "predicted": 52.7,
+        "residual": 4.1,
+        "absolute_error": 4.1
+      },
+      {
+        "actual": 68.9,
+        "predicted": 70.1,
+        "residual": -1.3,
+        "absolute_error": 1.3
+      },
+      {
+        "actual": 63.8,
+        "predicted": 60.1,
+        "residual": 3.6,
+        "absolute_error": 3.6
+      },
+      {
+        "actual": 56.0,
+        "predicted": 50.4,
+        "residual": 5.6,
+        "absolute_error": 5.6
+      },
+      {
+        "actual": 73.7,
+        "predicted": 79.5,
+        "residual": -5.9,
+        "absolute_error": 5.9
+      },
+      {
+        "actual": 47.7,
+        "predicted": 46.8,
+        "residual": 0.9,
+        "absolute_error": 0.9
+      },
+      {
+        "actual": 56.1,
+        "predicted": 56.3,
+        "residual": -0.3,
+        "absolute_error": 0.3
+      },
+      {
+        "actual": 60.1,
+        "predicted": 54.5,
+        "residual": 5.7,
+        "absolute_error": 5.7
+      },
+      {
+        "actual": 65.1,
+        "predicted": 62.9,
+        "residual": 2.2,
+        "absolute_error": 2.2
+      },
+      {
+        "actual": 83.2,
+        "predicted": 83.6,
+        "residual": -0.4,
+        "absolute_error": 0.4
+      },
+      {
+        "actual": 51.0,
+        "predicted": 46.4,
+        "residual": 4.6,
+        "absolute_error": 4.6
+      },
+      {
+        "actual": 68.3,
+        "predicted": 69.8,
+        "residual": -1.5,
+        "absolute_error": 1.5
+      },
+      {
+        "actual": 72.6,
+        "predicted": 70.2,
+        "residual": 2.4,
+        "absolute_error": 2.4
+      },
+      {
+        "actual": 42.6,
+        "predicted": 41.4,
+        "residual": 1.2,
+        "absolute_error": 1.2
+      },
+      {
+        "actual": 73.4,
+        "predicted": 71.0,
+        "residual": 2.4,
+        "absolute_error": 2.4
+      },
+      {
+        "actual": 49.4,
+        "predicted": 56.8,
+        "residual": -7.4,
+        "absolute_error": 7.4
+      },
+      {
+        "actual": 43.6,
+        "predicted": 43.5,
+        "residual": 0.1,
+        "absolute_error": 0.1
+      },
+      {
+        "actual": 92.2,
+        "predicted": 88.0,
+        "residual": 4.2,
+        "absolute_error": 4.2
+      },
+      {
+        "actual": 93.1,
+        "predicted": 96.4,
+        "residual": -3.3,
+        "absolute_error": 3.3
+      },
+      {
+        "actual": 84.5,
+        "predicted": 79.6,
+        "residual": 4.9,
+        "absolute_error": 4.9
+      },
+      {
+        "actual": 56.8,
+        "predicted": 57.6,
+        "residual": -0.8,
+        "absolute_error": 0.8
+      },
+      {
+        "actual": 45.4,
+        "predicted": 37.5,
+        "residual": 7.8,
+        "absolute_error": 7.8
+      },
+      {
+        "actual": 77.6,
+        "predicted": 72.3,
+        "residual": 5.3,
+        "absolute_error": 5.3
+      },
+      {
+        "actual": 64.2,
+        "predicted": 65.0,
+        "residual": -0.8,
+        "absolute_error": 0.8
+      },
+      {
+        "actual": 46.7,
+        "predicted": 49.7,
+        "residual": -3.0,
+        "absolute_error": 3.0
+      },
+      {
+        "actual": 67.2,
+        "predicted": 67.9,
+        "residual": -0.7,
+        "absolute_error": 0.7
+      },
+      {
+        "actual": 41.9,
+        "predicted": 41.4,
+        "residual": 0.5,
+        "absolute_error": 0.5
+      },
+      {
+        "actual": 90.0,
+        "predicted": 88.8,
+        "residual": 1.2,
+        "absolute_error": 1.2
+      },
+      {
+        "actual": 54.2,
+        "predicted": 48.3,
+        "residual": 5.9,
+        "absolute_error": 5.9
+      },
+      {
+        "actual": 76.4,
+        "predicted": 73.6,
+        "residual": 2.9,
+        "absolute_error": 2.9
+      },
+      {
+        "actual": 57.1,
+        "predicted": 55.3,
+        "residual": 1.8,
+        "absolute_error": 1.8
+      },
+      {
+        "actual": 68.6,
+        "predicted": 72.8,
+        "residual": -4.2,
+        "absolute_error": 4.2
+      },
+      {
+        "actual": 70.1,
+        "predicted": 71.4,
+        "residual": -1.4,
+        "absolute_error": 1.4
+      },
+      {
+        "actual": 50.2,
+        "predicted": 43.1,
+        "residual": 7.1,
+        "absolute_error": 7.1
+      },
+      {
+        "actual": 93.3,
+        "predicted": 94.6,
+        "residual": -1.3,
+        "absolute_error": 1.3
+      },
+      {
+        "actual": 82.6,
+        "predicted": 81.1,
+        "residual": 1.5,
+        "absolute_error": 1.5
+      },
+      {
+        "actual": 91.7,
+        "predicted": 89.0,
+        "residual": 2.7,
+        "absolute_error": 2.7
+      },
+      {
+        "actual": 89.2,
+        "predicted": 91.7,
+        "residual": -2.4,
+        "absolute_error": 2.4
+      },
+      {
+        "actual": 72.9,
+        "predicted": 77.0,
+        "residual": -4.1,
+        "absolute_error": 4.1
+      },
+      {
+        "actual": 90.7,
+        "predicted": 94.4,
+        "residual": -3.7,
+        "absolute_error": 3.7
+      },
+      {
+        "actual": 44.9,
+        "predicted": 41.5,
+        "residual": 3.4,
+        "absolute_error": 3.4
+      },
+      {
+        "actual": 50.8,
+        "predicted": 49.5,
+        "residual": 1.2,
+        "absolute_error": 1.2
+      },
+      {
+        "actual": 42.5,
+        "predicted": 43.8,
+        "residual": -1.3,
+        "absolute_error": 1.3
+      },
+      {
+        "actual": 57.9,
+        "predicted": 61.8,
+        "residual": -3.9,
+        "absolute_error": 3.9
+      },
+      {
+        "actual": 61.4,
+        "predicted": 59.5,
+        "residual": 1.9,
+        "absolute_error": 1.9
+      },
+      {
+        "actual": 54.9,
+        "predicted": 54.2,
+        "residual": 0.7,
+        "absolute_error": 0.7
+      },
+      {
+        "actual": 85.6,
+        "predicted": 81.2,
+        "residual": 4.4,
+        "absolute_error": 4.4
+      },
+      {
+        "actual": 59.6,
+        "predicted": 54.8,
+        "residual": 4.8,
+        "absolute_error": 4.8
+      },
+      {
+        "actual": 55.5,
+        "predicted": 58.7,
+        "residual": -3.3,
+        "absolute_error": 3.3
+      },
+      {
+        "actual": 69.8,
+        "predicted": 75.3,
+        "residual": -5.4,
+        "absolute_error": 5.4
+      },
+      {
+        "actual": 47.8,
+        "predicted": 47.5,
+        "residual": 0.3,
+        "absolute_error": 0.3
+      },
+      {
+        "actual": 84.1,
+        "predicted": 88.1,
+        "residual": -4.0,
+        "absolute_error": 4.0
+      },
+      {
+        "actual": 44.1,
+        "predicted": 45.5,
+        "residual": -1.4,
+        "absolute_error": 1.4
+      },
+      {
+        "actual": 94.3,
+        "predicted": 91.7,
+        "residual": 2.6,
+        "absolute_error": 2.6
+      },
+      {
+        "actual": 82.5,
+        "predicted": 83.9,
+        "residual": -1.4,
+        "absolute_error": 1.4
+      },
+      {
+        "actual": 50.9,
+        "predicted": 57.1,
+        "residual": -6.2,
+        "absolute_error": 6.2
+      },
+      {
+        "actual": 40.3,
+        "predicted": 40.2,
+        "residual": 0.1,
+        "absolute_error": 0.1
+      },
+      {
+        "actual": 84.9,
+        "predicted": 91.1,
+        "residual": -6.3,
+        "absolute_error": 6.3
+      },
+      {
+        "actual": 78.9,
+        "predicted": 68.4,
+        "residual": 10.5,
+        "absolute_error": 10.5
+      },
+      {
+        "actual": 80.1,
+        "predicted": 83.4,
+        "residual": -3.3,
+        "absolute_error": 3.3
+      },
+      {
+        "actual": 82.4,
+        "predicted": 82.8,
+        "residual": -0.3,
+        "absolute_error": 0.3
+      },
+      {
+        "actual": 44.1,
+        "predicted": 42.9,
+        "residual": 1.2,
+        "absolute_error": 1.2
+      },
+      {
+        "actual": 59.7,
+        "predicted": 60.1,
+        "residual": -0.4,
+        "absolute_error": 0.4
+      },
+      {
+        "actual": 46.4,
+        "predicted": 38.4,
+        "residual": 8.0,
+        "absolute_error": 8.0
+      }
+    ],
+    "guidance": [
+      "Mean residual is close to zero, showing balanced predictions across the target range.",
+      "Residual variance is relatively stable across lower and higher score regimes."
+    ]
+  },
+  "largest_errors": [
+    {
+      "rank": 1,
+      "actual": 78.9,
+      "predicted": 68.4,
+      "error": 10.5,
+      "absolute_error": 10.5,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 2,
+      "actual": 46.4,
+      "predicted": 38.4,
+      "error": 8.0,
+      "absolute_error": 8.0,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 3,
+      "actual": 45.4,
+      "predicted": 37.5,
+      "error": 7.8,
+      "absolute_error": 7.8,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 4,
+      "actual": 51.7,
+      "predicted": 44.0,
+      "error": 7.7,
+      "absolute_error": 7.7,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 5,
+      "actual": 49.4,
+      "predicted": 56.8,
+      "error": -7.4,
+      "absolute_error": 7.4,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 6,
+      "actual": 50.2,
+      "predicted": 43.1,
+      "error": 7.1,
+      "absolute_error": 7.1,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 7,
+      "actual": 50.0,
+      "predicted": 43.1,
+      "error": 6.9,
+      "absolute_error": 6.9,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 8,
+      "actual": 43.2,
+      "predicted": 49.5,
+      "error": -6.3,
+      "absolute_error": 6.3,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 9,
+      "actual": 84.9,
+      "predicted": 91.1,
+      "error": -6.3,
+      "absolute_error": 6.3,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 10,
+      "actual": 50.9,
+      "predicted": 57.1,
+      "error": -6.2,
+      "absolute_error": 6.2,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 11,
+      "actual": 72.9,
+      "predicted": 79.0,
+      "error": -6.1,
+      "absolute_error": 6.1,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 12,
+      "actual": 54.2,
+      "predicted": 48.3,
+      "error": 5.9,
+      "absolute_error": 5.9,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 13,
+      "actual": 73.7,
+      "predicted": 79.5,
+      "error": -5.9,
+      "absolute_error": 5.9,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 14,
+      "actual": 60.1,
+      "predicted": 54.5,
+      "error": 5.7,
+      "absolute_error": 5.7,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    },
+    {
+      "rank": 15,
+      "actual": 56.0,
+      "predicted": 50.4,
+      "error": 5.6,
+      "absolute_error": 5.6,
+      "error_tier": "Typical Error",
+      "model_version": "1",
+      "timestamp": "2026-10-02T10:00:25.715562+00:00"
+    }
+  ]
+}

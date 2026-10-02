@@ -1,0 +1,144 @@
+[
+  {
+    "timestamp": "2026-10-02T10:00:26.111938+00:00",
+    "action": "validated",
+    "model_name": "Ridge Regression",
+    "model_version": "cand-test-123",
+    "previous_version": "1",
+    "actor": "unit_test",
+    "reason": "Test validation event",
+    "metadata": {
+      "rmse": 7.1
+    }
+  },
+  {
+    "timestamp": "2026-10-02T09:42:37.431602+00:00",
+    "action": "validated",
+    "model_name": "Ridge Regression",
+    "model_version": "cand-test-123",
+    "previous_version": "1",
+    "actor": "unit_test",
+    "reason": "Test validation event",
+    "metadata": {
+      "rmse": 7.1
+    }
+  },
+  {
+    "timestamp": "2026-09-27T04:18:55.557865+00:00",
+    "action": "validated",
+    "model_name": "Ridge Regression",
+    "model_version": "cand-test-123",
+    "previous_version": "1",
+    "actor": "unit_test",
+    "reason": "Test validation event",
+    "metadata": {
+      "rmse": 7.1
+    }
+  },
+  {
+    "timestamp": "2026-09-27T03:47:42.431052+00:00",
+    "action": "validated",
+    "model_name": "Ridge Regression",
+    "model_version": "cand-test-123",
+    "previous_version": "1",
+    "actor": "unit_test",
+    "reason": "Test validation event",
+    "metadata": {
+      "rmse": 7.1
+    }
+  },
+  {
+    "timestamp": "2026-09-26T16:40:33.285032+00:00",
+    "action": "promoted",
+    "model_name": "learntrack-student-performance",
+    "model_version": "candidate-8963bdf8",
+    "previous_version": "1",
+    "actor": "Lead MLOps Engineer",
+    "reason": "Candidate validated with superior predictive stability",
+    "metadata": {
+      "new_metrics": {
+        "mae": 4.494,
+        "rmse": 7.677,
+        "r2": 0.8392
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-26T16:40:29.272225+00:00",
+    "action": "promoted",
+    "model_name": "learntrack-student-performance",
+    "model_version": "candidate-8963bdf8",
+    "previous_version": "1",
+    "actor": "Lead MLOps Engineer",
+    "reason": "Candidate validated with superior predictive stability",
+    "metadata": {
+      "new_metrics": {
+        "mae": 4.494,
+        "rmse": 7.677,
+        "r2": 0.8392
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-26T16:40:19.477577+00:00",
+    "action": "trained",
+    "model_name": "Linear Regression (Ridge)",
+    "model_version": "candidate-8963bdf8",
+    "previous_version": "1",
+    "actor": "system_retraining",
+    "reason": "Candidate generated via manual trigger. Status: VALIDATED",
+    "metadata": {
+      "candidate": {
+        "rmse": 7.677,
+        "mae": 4.494,
+        "r2": 0.8392
+      },
+      "production": {
+        "rmse": 7.677,
+        "mae": 4.494,
+        "r2": 0.8392
+      },
+      "deltas": {
+        "rmse_delta": 0.0,
+        "mae_delta": 0.0,
+        "r2_delta": 0.0
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-26T16:34:14.015201+00:00",
+    "action": "validated",
+    "model_name": "Ridge Regression",
+    "model_version": "cand-test-123",
+    "previous_version": "1",
+    "actor": "unit_test",
+    "reason": "Test validation event",
+    "metadata": {
+      "rmse": 7.1
+    }
+  },
+  {
+    "timestamp": "2026-09-26T16:28:01.696312+00:00",
+    "action": "validated",
+    "model_name": "Ridge Regression",
+    "model_version": "cand-test-123",
+    "previous_version": "1",
+    "actor": "unit_test",
+    "reason": "Test validation event",
+    "metadata": {
+      "rmse": 7.1
+    }
+  },
+  {
+    "timestamp": "2026-09-26T16:26:20.533631+00:00",
+    "action": "validated",
+    "model_name": "Ridge Regression",
+    "model_version": "cand-test-123",
+    "previous_version": "1",
+    "actor": "unit_test",
+    "reason": "Test validation event",
+    "metadata": {
+      "rmse": 7.1
+    }
+  }
+]

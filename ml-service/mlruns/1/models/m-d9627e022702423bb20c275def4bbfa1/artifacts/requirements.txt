@@ -1,0 +1,12 @@
+mlflow==3.16.1
+numpy==2.4.6
+opt-einsum==3.3.0
+pandas==3.0.3
+psutil==7.2.2
+pyarrow==24.0.0
+pytest==9.0.2
+scikit-learn==1.8.0
+scipy==1.17.0
+skops==0.16.0
+torch==2.10.0
+tqdm==4.67.3

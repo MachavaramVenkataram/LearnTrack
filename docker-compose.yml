@@ -1,0 +1,73 @@
+version: "3.8"
+
+services:
+  ml-service:
+    build:
+      context: ./ml-service
+      dockerfile: Dockerfile
+    container_name: learntrack-ml-service
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    environment:
+      - PORT=8001
+      - CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI:-sqlite:///mlruns.db}
+      - MLFLOW_EXPERIMENT_NAME=${MLFLOW_EXPERIMENT_NAME:-learntrack-student-performance}
+      - PRODUCTION_MODEL_NAME=${PRODUCTION_MODEL_NAME:-learntrack-student-performance}
+      - PRODUCTION_MODEL_VERSION=${PRODUCTION_MODEL_VERSION:-1}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks:
+      - learntrack-network
+
+  # Optional MLflow Tracking UI Service (Enable with: docker compose --profile dev-mlflow up)
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.14.0
+    container_name: learntrack-mlflow
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - BACKEND_STORE_URI=sqlite:///mlflow.db
+      - DEFAULT_ARTIFACT_ROOT=/mlruns
+    volumes:
+      - ./mlruns:/mlruns
+    command: mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root /mlruns --host 0.0.0.0 --port 5000
+    networks:
+      - learntrack-network
+    profiles:
+      - dev-mlflow
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+        - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+        - NEXT_PUBLIC_ML_SERVICE_URL=http://ml-service:8001
+        - NEXT_PUBLIC_APP_URL=http://localhost:3000
+    container_name: learntrack-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+      - NEXT_PUBLIC_ML_SERVICE_URL=http://ml-service:8001
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - AI_API_KEY=${AI_API_KEY}
+    depends_on:
+      ml-service:
+        condition: service_healthy
+    networks:
+      - learntrack-network
+
+networks:
+  learntrack-network:
+    driver: bridge

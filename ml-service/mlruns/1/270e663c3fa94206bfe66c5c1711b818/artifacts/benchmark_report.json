@@ -1,0 +1,1094 @@
+{
+  "evaluation_type": "BENCHMARK",
+  "status": "COMPLETED",
+  "timestamp": "2026-09-26T16:23:07.617326+00:00",
+  "sample_count": 157,
+  "model_name": "Linear Regression (Ridge)",
+  "model_version": "1",
+  "dataset_version": "1.0.0",
+  "run_id": null,
+  "thresholds": {
+    "warning_threshold": 8.0,
+    "large_threshold": 15.0
+  },
+  "metrics": {
+    "mae": 4.49,
+    "rmse": 7.68,
+    "r2": 0.8392,
+    "mean_error": 0.42,
+    "median_error": 0.8,
+    "median_absolute_error": 2.79,
+    "max_absolute_error": 44.95,
+    "sample_count": 157
+  },
+  "performance_ranges": [
+    {
+      "range_label": "0\u201340 (At Risk)",
+      "range_min": 0.0,
+      "range_max": 40.0,
+      "prediction_count": 15,
+      "insufficient_observations": false,
+      "message": null,
+      "mae": 12.78,
+      "rmse": 20.11,
+      "mean_error": -9.58
+    },
+    {
+      "range_label": "40\u201360 (Developing)",
+      "range_min": 40.0,
+      "range_max": 60.0,
+      "prediction_count": 70,
+      "insufficient_observations": false,
+      "message": null,
+      "mae": 3.56,
+      "rmse": 4.59,
+      "mean_error": 1.85
+    },
+    {
+      "range_label": "60\u201380 (Proficient)",
+      "range_min": 60.0,
+      "range_max": 80.0,
+      "prediction_count": 51,
+      "insufficient_observations": false,
+      "message": null,
+      "mae": 3.73,
+      "rmse": 5.08,
+      "mean_error": 1.68
+    },
+    {
+      "range_label": "80\u2013100 (Advanced)",
+      "range_min": 80.0,
+      "range_max": 100.0,
+      "prediction_count": 21,
+      "insufficient_observations": false,
+      "message": null,
+      "mae": 3.54,
+      "rmse": 4.32,
+      "mean_error": -0.25
+    }
+  ],
+  "feature_segments": {
+    "attendance_percentage": [
+      {
+        "segment_label": "0\u201360% (Low Attendance)",
+        "min": 0.0,
+        "max": 60.0,
+        "count": 0,
+        "insufficient_observations": true,
+        "message": "Insufficient observations",
+        "mae": null,
+        "rmse": null,
+        "mean_error": null
+      },
+      {
+        "segment_label": "60\u201375% (Below Target)",
+        "min": 60.0,
+        "max": 75.0,
+        "count": 2,
+        "insufficient_observations": true,
+        "message": "Insufficient observations",
+        "mae": null,
+        "rmse": null,
+        "mean_error": null
+      },
+      {
+        "segment_label": "75\u201390% (Satisfactory)",
+        "min": 75.0,
+        "max": 90.0,
+        "count": 16,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.97,
+        "rmse": 4.9,
+        "mean_error": -2.74
+      },
+      {
+        "segment_label": "90\u2013100% (High Attendance)",
+        "min": 90.0,
+        "max": 100.0,
+        "count": 139,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 4.59,
+        "rmse": 7.98,
+        "mean_error": 0.81
+      }
+    ],
+    "study_hours": [
+      {
+        "segment_label": "< 2 hrs/wk (Minimal)",
+        "min": 0.0,
+        "max": 2.0,
+        "count": 26,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 4.55,
+        "rmse": 7.23,
+        "mean_error": -1.04
+      },
+      {
+        "segment_label": "2\u20135 hrs/wk (Moderate)",
+        "min": 2.0,
+        "max": 5.0,
+        "count": 95,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 4.99,
+        "rmse": 8.78,
+        "mean_error": 0.49
+      },
+      {
+        "segment_label": "5\u20138 hrs/wk (Focused)",
+        "min": 5.0,
+        "max": 8.0,
+        "count": 27,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.17,
+        "rmse": 3.99,
+        "mean_error": 1.85
+      },
+      {
+        "segment_label": "8+ hrs/wk (High)",
+        "min": 8.0,
+        "max": 60.0,
+        "count": 9,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.04,
+        "rmse": 4.0,
+        "mean_error": -0.31
+      }
+    ],
+    "internal_marks": [
+      {
+        "segment_label": "0\u201340 pts (At Risk)",
+        "min": 0.0,
+        "max": 40.0,
+        "count": 19,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 6.05,
+        "rmse": 9.11,
+        "mean_error": 0.73
+      },
+      {
+        "segment_label": "40\u201360 pts (Average)",
+        "min": 40.0,
+        "max": 60.0,
+        "count": 73,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 5.36,
+        "rmse": 9.52,
+        "mean_error": 0.62
+      },
+      {
+        "segment_label": "60\u201380 pts (Good)",
+        "min": 60.0,
+        "max": 80.0,
+        "count": 49,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 2.94,
+        "rmse": 3.98,
+        "mean_error": 1.03
+      },
+      {
+        "segment_label": "80\u2013100 pts (Distinction)",
+        "min": 80.0,
+        "max": 100.0,
+        "count": 16,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.43,
+        "rmse": 4.2,
+        "mean_error": -2.67
+      }
+    ],
+    "previous_score": [
+      {
+        "segment_label": "0\u201340 pts",
+        "min": 0.0,
+        "max": 40.0,
+        "count": 17,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 8.01,
+        "rmse": 11.8,
+        "mean_error": -0.99
+      },
+      {
+        "segment_label": "40\u201360 pts",
+        "min": 40.0,
+        "max": 60.0,
+        "count": 75,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 4.79,
+        "rmse": 8.72,
+        "mean_error": 0.9
+      },
+      {
+        "segment_label": "60\u201380 pts",
+        "min": 60.0,
+        "max": 80.0,
+        "count": 51,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.1,
+        "rmse": 4.25,
+        "mean_error": 1.13
+      },
+      {
+        "segment_label": "80\u2013100 pts",
+        "min": 80.0,
+        "max": 100.0,
+        "count": 14,
+        "insufficient_observations": false,
+        "message": null,
+        "mae": 3.69,
+        "rmse": 4.38,
+        "mean_error": -2.96
+      }
+    ]
+  },
+  "residual_analysis": {
+    "status": "COMPLETED",
+    "sample_count": 157,
+    "mean_residual": 0.424,
+    "median_residual": 0.798,
+    "std_residual": 7.665,
+    "skewness": -3.132,
+    "distribution_bins": [
+      {
+        "bin_label": "-45.0 to -38.9",
+        "bin_min": -45.0,
+        "bin_max": -38.9,
+        "count": 2,
+        "percentage": 1.3
+      },
+      {
+        "bin_label": "-38.9 to -32.8",
+        "bin_min": -38.9,
+        "bin_max": -32.8,
+        "count": 0,
+        "percentage": 0.0
+      },
+      {
+        "bin_label": "-32.8 to -26.7",
+        "bin_min": -32.8,
+        "bin_max": -26.7,
+        "count": 2,
+        "percentage": 1.3
+      },
+      {
+        "bin_label": "-26.7 to -20.6",
+        "bin_min": -26.7,
+        "bin_max": -20.6,
+        "count": 0,
+        "percentage": 0.0
+      },
+      {
+        "bin_label": "-20.6 to -14.5",
+        "bin_min": -20.6,
+        "bin_max": -14.5,
+        "count": 0,
+        "percentage": 0.0
+      },
+      {
+        "bin_label": "-14.5 to -8.5",
+        "bin_min": -14.5,
+        "bin_max": -8.5,
+        "count": 2,
+        "percentage": 1.3
+      },
+      {
+        "bin_label": "-8.5 to -2.4",
+        "bin_min": -8.5,
+        "bin_max": -2.4,
+        "count": 26,
+        "percentage": 16.6
+      },
+      {
+        "bin_label": "-2.4 to 3.7",
+        "bin_min": -2.4,
+        "bin_max": 3.7,
+        "count": 83,
+        "percentage": 52.9
+      },
+      {
+        "bin_label": "3.7 to 9.8",
+        "bin_min": 3.7,
+        "bin_max": 9.8,
+        "count": 35,
+        "percentage": 22.3
+      },
+      {
+        "bin_label": "9.8 to 15.9",
+        "bin_min": 9.8,
+        "bin_max": 15.9,
+        "count": 7,
+        "percentage": 4.5
+      }
+    ],
+    "scatter_points": [
+      {
+        "actual": 55.0,
+        "predicted": 50.6,
+        "residual": 4.4,
+        "absolute_error": 4.4
+      },
+      {
+        "actual": 50.0,
+        "predicted": 47.5,
+        "residual": 2.5,
+        "absolute_error": 2.5
+      },
+      {
+        "actual": 55.0,
+        "predicted": 55.4,
+        "residual": -0.4,
+        "absolute_error": 0.4
+      },
+      {
+        "actual": 75.0,
+        "predicted": 72.2,
+        "residual": 2.8,
+        "absolute_error": 2.8
+      },
+      {
+        "actual": 45.0,
+        "predicted": 42.2,
+        "residual": 2.8,
+        "absolute_error": 2.8
+      },
+      {
+        "actual": 45.0,
+        "predicted": 43.6,
+        "residual": 1.4,
+        "absolute_error": 1.4
+      },
+      {
+        "actual": 60.0,
+        "predicted": 63.4,
+        "residual": -3.4,
+        "absolute_error": 3.4
+      },
+      {
+        "actual": 45.0,
+        "predicted": 42.3,
+        "residual": 2.7,
+        "absolute_error": 2.7
+      },
+      {
+        "actual": 60.0,
+        "predicted": 59.7,
+        "residual": 0.3,
+        "absolute_error": 0.3
+      },
+      {
+        "actual": 60.0,
+        "predicted": 65.7,
+        "residual": -5.7,
+        "absolute_error": 5.7
+      },
+      {
+        "actual": 70.0,
+        "predicted": 59.2,
+        "residual": 10.8,
+        "absolute_error": 10.8
+      },
+      {
+        "actual": 55.0,
+        "predicted": 53.7,
+        "residual": 1.3,
+        "absolute_error": 1.3
+      },
+      {
+        "actual": 60.0,
+        "predicted": 60.9,
+        "residual": -0.9,
+        "absolute_error": 0.9
+      },
+      {
+        "actual": 90.0,
+        "predicted": 92.6,
+        "residual": -2.6,
+        "absolute_error": 2.6
+      },
+      {
+        "actual": 75.0,
+        "predicted": 79.1,
+        "residual": -4.1,
+        "absolute_error": 4.1
+      },
+      {
+        "actual": 55.0,
+        "predicted": 49.6,
+        "residual": 5.4,
+        "absolute_error": 5.4
+      },
+      {
+        "actual": 45.0,
+        "predicted": 43.5,
+        "residual": 1.5,
+        "absolute_error": 1.5
+      },
+      {
+        "actual": 45.0,
+        "predicted": 48.4,
+        "residual": -3.4,
+        "absolute_error": 3.4
+      },
+      {
+        "actual": 65.0,
+        "predicted": 66.1,
+        "residual": -1.1,
+        "absolute_error": 1.1
+      },
+      {
+        "actual": 40.0,
+        "predicted": 44.6,
+        "residual": -4.6,
+        "absolute_error": 4.6
+      },
+      {
+        "actual": 0.0,
+        "predicted": 44.1,
+        "residual": -44.1,
+        "absolute_error": 44.1
+      },
+      {
+        "actual": 55.0,
+        "predicted": 56.5,
+        "residual": -1.5,
+        "absolute_error": 1.5
+      },
+      {
+        "actual": 35.0,
+        "predicted": 36.0,
+        "residual": -1.0,
+        "absolute_error": 1.0
+      },
+      {
+        "actual": 65.0,
+        "predicted": 65.9,
+        "residual": -0.9,
+        "absolute_error": 0.9
+      },
+      {
+        "actual": 50.0,
+        "predicted": 48.1,
+        "residual": 1.9,
+        "absolute_error": 1.9
+      },
+      {
+        "actual": 65.0,
+        "predicted": 60.1,
+        "residual": 4.9,
+        "absolute_error": 4.9
+      },
+      {
+        "actual": 80.0,
+        "predicted": 79.4,
+        "residual": 0.6,
+        "absolute_error": 0.6
+      },
+      {
+        "actual": 60.0,
+        "predicted": 57.6,
+        "residual": 2.4,
+        "absolute_error": 2.4
+      },
+      {
+        "actual": 75.0,
+        "predicted": 72.6,
+        "residual": 2.4,
+        "absolute_error": 2.4
+      },
+      {
+        "actual": 65.0,
+        "predicted": 69.0,
+        "residual": -4.0,
+        "absolute_error": 4.0
+      },
+      {
+        "actual": 55.0,
+        "predicted": 52.7,
+        "residual": 2.3,
+        "absolute_error": 2.3
+      },
+      {
+        "actual": 45.0,
+        "predicted": 44.0,
+        "residual": 1.0,
+        "absolute_error": 1.0
+      },
+      {
+        "actual": 35.0,
+        "predicted": 21.6,
+        "residual": 13.4,
+        "absolute_error": 13.4
+      },
+      {
+        "actual": 50.0,
+        "predicted": 52.8,
+        "residual": -2.8,
+        "absolute_error": 2.8
+      },
+      {
+        "actual": 80.0,
+        "predicted": 81.9,
+        "residual": -1.9,
+        "absolute_error": 1.9
+      },
+      {
+        "actual": 75.0,
+        "predicted": 77.8,
+        "residual": -2.8,
+        "absolute_error": 2.8
+      },
+      {
+        "actual": 80.0,
+        "predicted": 75.9,
+        "residual": 4.1,
+        "absolute_error": 4.1
+      },
+      {
+        "actual": 60.0,
+        "predicted": 54.0,
+        "residual": 6.0,
+        "absolute_error": 6.0
+      },
+      {
+        "actual": 40.0,
+        "predicted": 34.3,
+        "residual": 5.7,
+        "absolute_error": 5.7
+      },
+      {
+        "actual": 60.0,
+        "predicted": 60.8,
+        "residual": -0.8,
+        "absolute_error": 0.8
+      },
+      {
+        "actual": 85.0,
+        "predicted": 91.1,
+        "residual": -6.1,
+        "absolute_error": 6.1
+      },
+      {
+        "actual": 40.0,
+        "predicted": 46.7,
+        "residual": -6.7,
+        "absolute_error": 6.7
+      },
+      {
+        "actual": 30.0,
+        "predicted": 33.8,
+        "residual": -3.8,
+        "absolute_error": 3.8
+      },
+      {
+        "actual": 40.0,
+        "predicted": 39.6,
+        "residual": 0.4,
+        "absolute_error": 0.4
+      },
+      {
+        "actual": 75.0,
+        "predicted": 74.2,
+        "residual": 0.8,
+        "absolute_error": 0.8
+      },
+      {
+        "actual": 35.0,
+        "predicted": 32.6,
+        "residual": 2.4,
+        "absolute_error": 2.4
+      },
+      {
+        "actual": 55.0,
+        "predicted": 53.3,
+        "residual": 1.7,
+        "absolute_error": 1.7
+      },
+      {
+        "actual": 70.0,
+        "predicted": 65.2,
+        "residual": 4.8,
+        "absolute_error": 4.8
+      },
+      {
+        "actual": 55.0,
+        "predicted": 52.2,
+        "residual": 2.8,
+        "absolute_error": 2.8
+      },
+      {
+        "actual": 0.0,
+        "predicted": 30.6,
+        "residual": -30.6,
+        "absolute_error": 30.6
+      },
+      {
+        "actual": 75.0,
+        "predicted": 70.1,
+        "residual": 4.9,
+        "absolute_error": 4.9
+      },
+      {
+        "actual": 50.0,
+        "predicted": 44.4,
+        "residual": 5.6,
+        "absolute_error": 5.6
+      },
+      {
+        "actual": 40.0,
+        "predicted": 40.7,
+        "residual": -0.7,
+        "absolute_error": 0.7
+      },
+      {
+        "actual": 75.0,
+        "predicted": 81.8,
+        "residual": -6.8,
+        "absolute_error": 6.8
+      },
+      {
+        "actual": 40.0,
+        "predicted": 38.9,
+        "residual": 1.1,
+        "absolute_error": 1.1
+      },
+      {
+        "actual": 55.0,
+        "predicted": 55.6,
+        "residual": -0.6,
+        "absolute_error": 0.6
+      },
+      {
+        "actual": 85.0,
+        "predicted": 86.9,
+        "residual": -1.9,
+        "absolute_error": 1.9
+      },
+      {
+        "actual": 60.0,
+        "predicted": 59.7,
+        "residual": 0.3,
+        "absolute_error": 0.3
+      },
+      {
+        "actual": 85.0,
+        "predicted": 92.4,
+        "residual": -7.4,
+        "absolute_error": 7.4
+      },
+      {
+        "actual": 60.0,
+        "predicted": 57.6,
+        "residual": 2.4,
+        "absolute_error": 2.4
+      },
+      {
+        "actual": 65.0,
+        "predicted": 66.9,
+        "residual": -1.9,
+        "absolute_error": 1.9
+      },
+      {
+        "actual": 55.0,
+        "predicted": 48.2,
+        "residual": 6.8,
+        "absolute_error": 6.8
+      },
+      {
+        "actual": 0.0,
+        "predicted": 45.0,
+        "residual": -45.0,
+        "absolute_error": 45.0
+      },
+      {
+        "actual": 65.0,
+        "predicted": 66.5,
+        "residual": -1.5,
+        "absolute_error": 1.5
+      },
+      {
+        "actual": 80.0,
+        "predicted": 79.7,
+        "residual": 0.3,
+        "absolute_error": 0.3
+      },
+      {
+        "actual": 80.0,
+        "predicted": 75.2,
+        "residual": 4.8,
+        "absolute_error": 4.8
+      },
+      {
+        "actual": 65.0,
+        "predicted": 65.6,
+        "residual": -0.6,
+        "absolute_error": 0.6
+      },
+      {
+        "actual": 55.0,
+        "predicted": 49.9,
+        "residual": 5.1,
+        "absolute_error": 5.1
+      },
+      {
+        "actual": 95.0,
+        "predicted": 101.0,
+        "residual": -6.0,
+        "absolute_error": 6.0
+      },
+      {
+        "actual": 40.0,
+        "predicted": 33.8,
+        "residual": 6.2,
+        "absolute_error": 6.2
+      },
+      {
+        "actual": 75.0,
+        "predicted": 74.7,
+        "residual": 0.3,
+        "absolute_error": 0.3
+      },
+      {
+        "actual": 50.0,
+        "predicted": 53.1,
+        "residual": -3.1,
+        "absolute_error": 3.1
+      },
+      {
+        "actual": 60.0,
+        "predicted": 52.6,
+        "residual": 7.4,
+        "absolute_error": 7.4
+      },
+      {
+        "actual": 75.0,
+        "predicted": 75.4,
+        "residual": -0.4,
+        "absolute_error": 0.4
+      },
+      {
+        "actual": 50.0,
+        "predicted": 40.3,
+        "residual": 9.7,
+        "absolute_error": 9.7
+      },
+      {
+        "actual": 55.0,
+        "predicted": 54.9,
+        "residual": 0.1,
+        "absolute_error": 0.1
+      },
+      {
+        "actual": 0.0,
+        "predicted": -4.2,
+        "residual": 4.2,
+        "absolute_error": 4.2
+      },
+      {
+        "actual": 75.0,
+        "predicted": 71.5,
+        "residual": 3.5,
+        "absolute_error": 3.5
+      },
+      {
+        "actual": 70.0,
+        "predicted": 64.7,
+        "residual": 5.3,
+        "absolute_error": 5.3
+      },
+      {
+        "actual": 75.0,
+        "predicted": 73.0,
+        "residual": 2.0,
+        "absolute_error": 2.0
+      },
+      {
+        "actual": 45.0,
+        "predicted": 49.4,
+        "residual": -4.4,
+        "absolute_error": 4.4
+      },
+      {
+        "actual": 55.0,
+        "predicted": 54.3,
+        "residual": 0.7,
+        "absolute_error": 0.7
+      },
+      {
+        "actual": 50.0,
+        "predicted": 41.9,
+        "residual": 8.1,
+        "absolute_error": 8.1
+      },
+      {
+        "actual": 80.0,
+        "predicted": 81.9,
+        "residual": -1.9,
+        "absolute_error": 1.9
+      },
+      {
+        "actual": 80.0,
+        "predicted": 77.7,
+        "residual": 2.3,
+        "absolute_error": 2.3
+      },
+      {
+        "actual": 45.0,
+        "predicted": 39.2,
+        "residual": 5.8,
+        "absolute_error": 5.8
+      },
+      {
+        "actual": 50.0,
+        "predicted": 39.8,
+        "residual": 10.2,
+        "absolute_error": 10.2
+      },
+      {
+        "actual": 55.0,
+        "predicted": 53.2,
+        "residual": 1.8,
+        "absolute_error": 1.8
+      },
+      {
+        "actual": 55.0,
+        "predicted": 54.1,
+        "residual": 0.9,
+        "absolute_error": 0.9
+      },
+      {
+        "actual": 60.0,
+        "predicted": 52.2,
+        "residual": 7.8,
+        "absolute_error": 7.8
+      },
+      {
+        "actual": 45.0,
+        "predicted": 34.4,
+        "residual": 10.6,
+        "absolute_error": 10.6
+      },
+      {
+        "actual": 80.0,
+        "predicted": 70.2,
+        "residual": 9.8,
+        "absolute_error": 9.8
+      },
+      {
+        "actual": 50.0,
+        "predicted": 50.1,
+        "residual": -0.1,
+        "absolute_error": 0.1
+      },
+      {
+        "actual": 45.0,
+        "predicted": 47.6,
+        "residual": -2.6,
+        "absolute_error": 2.6
+      },
+      {
+        "actual": 55.0,
+        "predicted": 59.7,
+        "residual": -4.7,
+        "absolute_error": 4.7
+      },
+      {
+        "actual": 55.0,
+        "predicted": 54.2,
+        "residual": 0.8,
+        "absolute_error": 0.8
+      },
+      {
+        "actual": 45.0,
+        "predicted": 43.5,
+        "residual": 1.5,
+        "absolute_error": 1.5
+      },
+      {
+        "actual": 50.0,
+        "predicted": 56.0,
+        "residual": -6.0,
+        "absolute_error": 6.0
+      },
+      {
+        "actual": 70.0,
+        "predicted": 70.7,
+        "residual": -0.7,
+        "absolute_error": 0.7
+      },
+      {
+        "actual": 65.0,
+        "predicted": 65.0,
+        "residual": -0.0,
+        "absolute_error": 0.0
+      }
+    ],
+    "guidance": [
+      "Mean residual is close to zero, showing balanced predictions across the target range.",
+      "Residual variance is relatively stable across lower and higher score regimes."
+    ]
+  },
+  "largest_errors": [
+    {
+      "rank": 1,
+      "actual": 0.0,
+      "predicted": 45.0,
+      "error": -45.0,
+      "absolute_error": 45.0,
+      "error_tier": "Large Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 2,
+      "actual": 0.0,
+      "predicted": 44.1,
+      "error": -44.1,
+      "absolute_error": 44.1,
+      "error_tier": "Large Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 3,
+      "actual": 0.0,
+      "predicted": 30.6,
+      "error": -30.6,
+      "absolute_error": 30.6,
+      "error_tier": "Large Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 4,
+      "actual": 0.0,
+      "predicted": 28.6,
+      "error": -28.6,
+      "absolute_error": 28.6,
+      "error_tier": "Large Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 5,
+      "actual": 60.0,
+      "predicted": 44.1,
+      "error": 15.9,
+      "absolute_error": 15.9,
+      "error_tier": "Large Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 6,
+      "actual": 75.0,
+      "predicted": 60.5,
+      "error": 14.5,
+      "absolute_error": 14.5,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 7,
+      "actual": 35.0,
+      "predicted": 21.6,
+      "error": 13.4,
+      "absolute_error": 13.4,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 8,
+      "actual": 50.0,
+      "predicted": 38.8,
+      "error": 11.2,
+      "absolute_error": 11.2,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 9,
+      "actual": 70.0,
+      "predicted": 59.2,
+      "error": 10.8,
+      "absolute_error": 10.8,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 10,
+      "actual": 45.0,
+      "predicted": 34.4,
+      "error": 10.6,
+      "absolute_error": 10.6,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 11,
+      "actual": 25.0,
+      "predicted": 35.5,
+      "error": -10.5,
+      "absolute_error": 10.5,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 12,
+      "actual": 50.0,
+      "predicted": 39.8,
+      "error": 10.2,
+      "absolute_error": 10.2,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 13,
+      "actual": 80.0,
+      "predicted": 70.2,
+      "error": 9.8,
+      "absolute_error": 9.8,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 14,
+      "actual": 50.0,
+      "predicted": 40.3,
+      "error": 9.7,
+      "absolute_error": 9.7,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    },
+    {
+      "rank": 15,
+      "actual": 45.0,
+      "predicted": 53.9,
+      "error": -8.9,
+      "absolute_error": 8.9,
+      "error_tier": "Elevated Error",
+      "model_version": "1",
+      "timestamp": "2026-09-26T16:23:07.617326+00:00"
+    }
+  ]
+}

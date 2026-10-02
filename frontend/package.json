@@ -1,0 +1,46 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:ml": "cd ../ml-service && .venv\\Scripts\\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "npx tsx src/lib/academic/__tests__/calculations.test.ts && npx tsx src/lib/ai/__tests__/ai.test.ts && npx tsx src/lib/ai/__tests__/gemini.test.ts && npx tsx --env-file=.env.local src/lib/ai/__tests__/central-ai.test.ts && npx tsx --env-file=.env.local src/lib/ai/__tests__/failover-integration.test.ts && npx tsx src/lib/flashcards/__tests__/scheduler.test.ts && npx tsx --env-file=.env.local src/lib/supabase/__tests__/supabase-integration.test.ts && npx tsx --env-file=.env.local src/lib/ml/__tests__/ml-client.test.ts",
+    "test:ml": "npx tsx --env-file=.env.local src/lib/ml/__tests__/ml-client.test.ts",
+    "test:gemini": "npx tsx src/lib/ai/__tests__/gemini.test.ts",
+    "test:central-ai": "npx tsx --env-file=.env.local src/lib/ai/__tests__/central-ai.test.ts",
+    "test:failover": "npx tsx --env-file=.env.local src/lib/ai/__tests__/failover-integration.test.ts",
+    "test:flashcards": "npx tsx src/lib/flashcards/__tests__/scheduler.test.ts",
+    "test:supabase": "npx tsx --env-file=.env.local src/lib/supabase/__tests__/supabase-integration.test.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.25.0",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.117.2",
+    "@types/canvas-confetti": "^1.9.0",
+    "canvas-confetti": "^1.9.4",
+    "clsx": "^2.1.1",
+    "framer-motion": "^13.4.4",
+    "groq-sdk": "^1.6.0",
+    "lucide-react": "^1.48.0",
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "recharts": "^3.10.1",
+    "tailwind-merge": "^3.7.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
