@@ -18,8 +18,14 @@ export function getEnvVar(key: string, required = true): string {
 }
 
 export function validateSupabaseEnv(): { supabaseUrl: string; supabaseAnonKey: string } {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  let supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  let supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  // In CI and test environments, use safe mock placeholders if not explicitly configured
+  if (process.env.CI === "true" || process.env.NODE_ENV === "test") {
+    supabaseUrl = supabaseUrl || "https://mock-ci-project.supabase.co";
+    supabaseAnonKey = supabaseAnonKey || "mock-anon-key-for-ci";
+  }
 
   if (!supabaseUrl || !supabaseAnonKey) {
     const missing = [];
@@ -35,28 +41,30 @@ export function validateSupabaseEnv(): { supabaseUrl: string; supabaseAnonKey: s
     );
   }
 
-  // Reject placeholder and mock URLs
-  if (
-    supabaseUrl.includes("mock-instance") ||
-    supabaseUrl.includes("placeholder-project") ||
-    supabaseUrl.includes("your-project-id")
-  ) {
-    throw new Error(
-      `[Supabase Configuration Invalid]\n` +
-      `NEXT_PUBLIC_SUPABASE_URL is currently set to a placeholder: "${supabaseUrl}".\n` +
-      `Please provide your real Supabase project URL in .env.local.`
-    );
-  }
+  // Reject placeholder and mock URLs in local development (allow safe mock placeholders in CI/test)
+  if (process.env.CI !== "true" && process.env.NODE_ENV !== "test") {
+    if (
+      supabaseUrl.includes("mock-instance") ||
+      supabaseUrl.includes("placeholder-project") ||
+      supabaseUrl.includes("your-project-id")
+    ) {
+      throw new Error(
+        `[Supabase Configuration Invalid]\n` +
+        `NEXT_PUBLIC_SUPABASE_URL is currently set to a placeholder: "${supabaseUrl}".\n` +
+        `Please provide your real Supabase project URL in .env.local.`
+      );
+    }
 
-  if (
-    supabaseAnonKey.includes("placeholder") ||
-    supabaseAnonKey.includes("mock-anon-key")
-  ) {
-    throw new Error(
-      `[Supabase Configuration Invalid]\n` +
-      `NEXT_PUBLIC_SUPABASE_ANON_KEY is currently set to a placeholder key.\n` +
-      `Please provide your real Supabase anon key in .env.local.`
-    );
+    if (
+      supabaseAnonKey.includes("placeholder") ||
+      supabaseAnonKey.includes("mock-anon-key")
+    ) {
+      throw new Error(
+        `[Supabase Configuration Invalid]\n` +
+        `NEXT_PUBLIC_SUPABASE_ANON_KEY is currently set to a placeholder key.\n` +
+        `Please provide your real Supabase anon key in .env.local.`
+      );
+    }
   }
 
   return { supabaseUrl, supabaseAnonKey };

@@ -26,6 +26,8 @@ import {
   AIInsightsOutputSchema,
 } from "../validation/schemas";
 
+process.env.GEMINI_API_KEY = process.env.GEMINI_API_KEY || "mock-gemini-test-key-for-unit-tests";
+
 console.log("Starting LearnTrack Centralized Gemini AI Architecture Unit Tests...\n");
 
 // TEST 1: Feature Registry Integrity

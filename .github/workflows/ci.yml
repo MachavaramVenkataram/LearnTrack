@@ -35,10 +35,18 @@ jobs:
 
       - name: Run Frontend Tests
         run: npm test
+        env:
+          CI: true
+          NODE_ENV: test
+          NEXT_PUBLIC_SUPABASE_URL: "https://mock-ci-project.supabase.co"
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: "mock-anon-key-for-ci"
+          GEMINI_API_KEY: "mock-gemini-key-for-ci"
+          GROQ_API_KEY: "mock-groq-key-for-ci"
 
       - name: Next.js Production Build
         run: npm run build
         env:
+          CI: true
           NEXT_PUBLIC_SUPABASE_URL: "https://mock-ci-project.supabase.co"
           NEXT_PUBLIC_SUPABASE_ANON_KEY: "mock-anon-key-for-ci-build"
           NEXT_PUBLIC_ML_SERVICE_URL: "http://127.0.0.1:8001"
@@ -59,6 +67,7 @@ jobs:
         with:
           python-version: "3.11"
           cache: "pip"
+          cache-dependency-path: ml-service/requirements.txt
 
       - name: Install Python Dependencies
         run: |

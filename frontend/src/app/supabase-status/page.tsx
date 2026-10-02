@@ -188,7 +188,7 @@ export default function SupabaseStatusPage() {
       let resolved = false;
 
       const subPromise = new Promise<void>((resolve) => {
-        channel.subscribe((status) => {
+        channel.subscribe((status: string) => {
           if (status === "SUBSCRIBED") {
             resolved = true;
             nextDiag.realtime = {

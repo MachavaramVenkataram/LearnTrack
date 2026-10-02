@@ -8,13 +8,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "npx tsx src/lib/academic/__tests__/calculations.test.ts && npx tsx src/lib/ai/__tests__/ai.test.ts && npx tsx src/lib/ai/__tests__/gemini.test.ts && npx tsx --env-file=.env.local src/lib/ai/__tests__/central-ai.test.ts && npx tsx --env-file=.env.local src/lib/ai/__tests__/failover-integration.test.ts && npx tsx src/lib/flashcards/__tests__/scheduler.test.ts && npx tsx --env-file=.env.local src/lib/supabase/__tests__/supabase-integration.test.ts && npx tsx --env-file=.env.local src/lib/ml/__tests__/ml-client.test.ts",
-    "test:ml": "npx tsx --env-file=.env.local src/lib/ml/__tests__/ml-client.test.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "npx tsx src/lib/academic/__tests__/calculations.test.ts && npx tsx src/lib/ai/__tests__/ai.test.ts && npx tsx src/lib/ai/__tests__/gemini.test.ts && npx tsx src/lib/ai/__tests__/central-ai.test.ts && npx tsx src/lib/ai/__tests__/failover-integration.test.ts && npx tsx src/lib/flashcards/__tests__/scheduler.test.ts",
+    "test:unit": "npm test",
+    "test:integration": "npx tsx src/lib/supabase/__tests__/supabase-integration.test.ts && npx tsx src/lib/ml/__tests__/ml-client.test.ts",
+    "test:ml": "npx tsx src/lib/ml/__tests__/ml-client.test.ts",
     "test:gemini": "npx tsx src/lib/ai/__tests__/gemini.test.ts",
-    "test:central-ai": "npx tsx --env-file=.env.local src/lib/ai/__tests__/central-ai.test.ts",
-    "test:failover": "npx tsx --env-file=.env.local src/lib/ai/__tests__/failover-integration.test.ts",
+    "test:central-ai": "npx tsx src/lib/ai/__tests__/central-ai.test.ts",
+    "test:failover": "npx tsx src/lib/ai/__tests__/failover-integration.test.ts",
     "test:flashcards": "npx tsx src/lib/flashcards/__tests__/scheduler.test.ts",
-    "test:supabase": "npx tsx --env-file=.env.local src/lib/supabase/__tests__/supabase-integration.test.ts"
+    "test:supabase": "npx tsx src/lib/supabase/__tests__/supabase-integration.test.ts"
   },
   "dependencies": {
     "@google/genai": "^2.25.0",

@@ -316,7 +316,7 @@ export async function getFlashcards(
 
     const { data, error } = await query;
     if (!error && data && data.length > 0) {
-      let cards = data.map(normalizeCard);
+      let cards: Flashcard[] = (data as (Record<string, unknown> | Flashcard)[]).map(normalizeCard);
 
       // Search filter
       if (options.search?.trim()) {

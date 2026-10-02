@@ -33,13 +33,19 @@ def run_eda():
 
     print("\n=== 5. GRADE DISTRIBUTION (Configurable Standard) ===")
     def map_grade(score):
-        if score >= 90: return "A+"
-        elif score >= 80: return "A"
-        elif score >= 70: return "B+"
-        elif score >= 60: return "B"
-        elif score >= 50: return "C"
-        elif score >= 40: return "D"
-        else: return "F"
+        if score >= 90:
+            return "A+"
+        if score >= 80:
+            return "A"
+        if score >= 70:
+            return "B+"
+        if score >= 60:
+            return "B"
+        if score >= 50:
+            return "C"
+        if score >= 40:
+            return "D"
+        return "F"
 
     grades = df["final_score"].apply(map_grade).value_counts()
     print(grades)
@@ -139,13 +145,19 @@ def run_eda():
                 "outputs": [],
                 "source": [
                     "def assign_grade(score):\n",
-                    "    if score >= 90: return 'A+'\n",
-                    "    elif score >= 80: return 'A'\n",
-                    "    elif score >= 70: return 'B+'\n",
-                    "    elif score >= 60: return 'B'\n",
-                    "    elif score >= 50: return 'C'\n",
-                    "    elif score >= 40: return 'D'\n",
-                    "    else: return 'F'\n",
+                    "    if score >= 90:\n",
+                    "        return 'A+'\n",
+                    "    if score >= 80:\n",
+                    "        return 'A'\n",
+                    "    if score >= 70:\n",
+                    "        return 'B+'\n",
+                    "    if score >= 60:\n",
+                    "        return 'B'\n",
+                    "    if score >= 50:\n",
+                    "        return 'C'\n",
+                    "    if score >= 40:\n",
+                    "        return 'D'\n",
+                    "    return 'F'\n",
                     "\n",
                     "df['grade'] = df['final_score'].apply(assign_grade)\n",
                     "print(df['grade'].value_counts())"
