@@ -1,4 +1,4 @@
-# Python artifacts
+# Python artifacts & Virtual Environments
 __pycache__/
 *.py[cod]
 *$py.class
@@ -11,6 +11,8 @@ ENV/
 *.egg-info/
 .installed.cfg
 *.egg
+build/
+dist/
 
 # Testing & Coverage
 .pytest_cache/
@@ -18,6 +20,10 @@ ENV/
 coverage/
 htmlcov/
 .cache/
+
+# MLflow Experiment Tracking & Checkpoints
+mlruns/
+*.skops
 
 # Databases & logs
 *.db
@@ -38,3 +44,5 @@ logs/
 Thumbs.db
 .vscode/
 .idea/
+tmp/
+temp/

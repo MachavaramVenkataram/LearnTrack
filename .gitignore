@@ -25,6 +25,8 @@ node_modules/
 .next/
 out/
 build/
+dist/
+coverage/
 .turbo/
 *.tsbuildinfo
 next-env.d.ts
@@ -40,12 +42,9 @@ venv/
 .venv/
 ENV/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -57,10 +56,13 @@ wheels/
 # Testing, ML Caches & Coverage
 .pytest_cache/
 .coverage
-coverage/
 htmlcov/
 *.lcov
 .cache/
+
+# MLflow, Experiment Tracking & Checkpoints
+mlruns/
+*.skops
 
 # Local databases & SQLite
 *.db
