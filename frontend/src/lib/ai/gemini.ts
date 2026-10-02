@@ -44,10 +44,10 @@ export class GeminiClient {
   private ai: GoogleGenAI | null = null;
 
   constructor(apiKey?: string, model?: string) {
-    this.apiKey = apiKey || AI_CONFIG.apiKey;
+    this.apiKey = apiKey !== undefined ? apiKey : AI_CONFIG.apiKey;
     this.model = model || AI_CONFIG.model;
 
-    if (this.apiKey) {
+    if (this.apiKey && this.apiKey.trim().length > 0) {
       if (!apiKey || apiKey === process.env.GEMINI_API_KEY) {
         this.ai = getGeminiClient();
       } else {
@@ -59,6 +59,11 @@ export class GeminiClient {
   }
 
   private getClient(): GoogleGenAI {
+    if (!this.apiKey || this.apiKey.trim().length === 0) {
+      throw new AIMissingApiKeyError(
+        "GEMINI_API_KEY is not configured. Add it to the server environment."
+      );
+    }
     if (this.ai) return this.ai;
     return getGeminiClient();
   }
